@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const PositionModel = require('./position');
 const DepartmentModel = require('./department');
+const NationModel = require('./nation');
+const EmployeeTypeModel = require('./employee_type');
 
 const sequelize = new Sequelize('OnJobTraining', 'sa', '123', {
     dialect: 'mssql',
@@ -16,6 +18,8 @@ const sequelize = new Sequelize('OnJobTraining', 'sa', '123', {
 
 const Position = PositionModel(sequelize, Sequelize)
 const Department = DepartmentModel(sequelize, Sequelize)
+const Nation = NationModel(sequelize, Sequelize);
+const EmployeeType = EmployeeTypeModel(sequelize, Sequelize);
 
 // Customer.belongsTo(CustomerType, { foreignKey: 'CUT_ID', as: 'customerType' });
 // CustomerType.hasMany(Customer, { foreignKey: 'CUT_ID', as: 'customers' });
@@ -27,5 +31,7 @@ sequelize.sync({ force: true }).then(() => {
 
 module.exports = {
     Position,
-    Department
+    Department,
+    Nation,
+    EmployeeType
 }

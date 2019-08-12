@@ -11,4 +11,4 @@ app.use(function(req, res, next) {
     next();
 })
 
-const { CustomerType, Customer } = require('./models/db')
+const { CustomerType, Customer, Nation, EmployeeType } = require('./models/db')
