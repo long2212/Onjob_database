@@ -25,9 +25,9 @@ const EmployeeType = EmployeeTypeModel(sequelize, Sequelize);
 // CustomerType.hasMany(Customer, { foreignKey: 'CUT_ID', as: 'customers' });
 
 //run once, thenn comment-out
-sequelize.sync({ force: true }).then(() => {
-    console.log('database & tables created!');
-});
+// sequelize.sync({ force: true }).then(() => {
+//     console.log('database & tables created!');
+// });
 
 module.exports = {
     Position,
