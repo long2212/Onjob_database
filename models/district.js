@@ -1,18 +1,20 @@
 module.exports = (sequelize, type) => {
-    return sequelize.define('position', {
+    return sequelize.define('district', {
         id: {
-            field: 'Pos_ID',
+            field: 'District_ID',
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        Pos_Name: {
+
+        Province_id: {
+            type: type.INTEGER,
+            allowNull: false
+        },         
+
+        District_name: {
             type: type.STRING,
             allowNull: false
-        },
-        Pos_Describe: {
-            type: type.STRING,
-            allowNull: true
-        }
+        },              
     }, { timestamps: false })
 }
