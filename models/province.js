@@ -9,6 +9,7 @@ module.exports = (sequelize, type) => {
         Province_name: {
             type: type.STRING,
             allowNull: false
-        },              
+        },
+         
     }, { timestamps: false })
 }

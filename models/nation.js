@@ -1,6 +1,6 @@
 module.exports = (sequelize, type) => {
     return sequelize.define('nation', {
-        nation_id: {
+        id: {
             field: 'Nation_ID',
             type: type.INTEGER,
             primaryKey: true,
@@ -12,7 +12,7 @@ module.exports = (sequelize, type) => {
         },
         nation_describe: {
             type: type.STRING,
-            allowNull: true
+            allowNull: false
         }
     }, { timestamps: false })
 }

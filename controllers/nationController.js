@@ -32,8 +32,8 @@ router.put('/:id', (req, res) => {
     Nation.findByPk(req.params.id).then(type => {
         if (type != null) {
             type.update({
-                name: req.body.name,
-                commision: req.body.commision
+                nation_name: req.body.nation_name,
+                nation_describe: req.body.nation_describe
             }).then(type => {
                 res.json(type);
             }).catch(err => {

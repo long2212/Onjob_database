@@ -5,12 +5,7 @@ module.exports = (sequelize, type) => {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
-        },
-
-        Province_id: {
-            type: type.INTEGER,
-            allowNull: false
-        },         
+        },      
 
         District_name: {
             type: type.STRING,

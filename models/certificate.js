@@ -6,6 +6,11 @@ module.exports = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
+
+        // CerType_ID:{
+        //     type: type.INTEGER,
+        //     allowNull: false
+        // },
         Cer_name: {
             type: type.STRING(30),
             allowNull: false

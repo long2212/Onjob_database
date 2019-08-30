@@ -12,13 +12,9 @@ module.exports = (sequelize, type) => {
         },
 
         Shift_Duration: {
-            type: type.INTEGER,
+            type: type.STRING,
             allowNull: false
         },
-
-        Shift_describe: {
-            type: type.STRING,
-            allowNull: true
-        }
+        
     }, { timestamps: false })
 }
